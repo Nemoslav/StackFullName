@@ -53,7 +53,7 @@ void PersonKeeper::WritePersons(QString path) const
 
 	stack_.ForEach([&](const Person &value) // перебираем все значения, находящиеся в хранителе
 	{
-        stream << value.last_name() << '\t' << value.first_name() << '\t' << value.patronymic() << endl; // записываем значения в файл построчно
+        stream << value.last_name() << '\t' << value.first_name() << '\t' << value.patronymic() << Qt::endl; // записываем значения в файл построчно
 	});
 
 	file.close(); // закрываем файл

@@ -15,7 +15,7 @@ Person::Person(QString last_name, QString first_name, QString patronymic)
 
 Person::Person(QString full_name)
 {
-    QStringList words = full_name.split(QRegularExpression("\\s+"), QString::SkipEmptyParts); // разбиваем полученную строку на не пустые слова
+    QStringList words = full_name.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts); // разбиваем полученную строку на не пустые слова
 
 	if (words.size() != 2 && words.size() != 3) // если в строке недостаточно, или слишком много слов, то это значит что входные данные в неверном формате
 	{
